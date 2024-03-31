@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <h2 style=text-align:center>FAKE NEWS PREDICTION</h2>
+    <br>
+    <h6 style=text-align:center>A fake news prediction web application using Machine Learning algorithms. </h6>
+    <h6 style=text-align:center>Enter your text to try it.</h6>
+    <br>
+        <div class='container'>
+         <form action="{{ url_for('predict')}}" method="post">
+          <div class="col-three-forth text-center col-md-offset-2">
+           <div class="form-group">
+            <textarea class="form-control jTextarea mt-3" id="jTextarea'" rows="5" name="news"
+            placeholder="Write your text here..." required>{{ news }}</textarea>
+        <br><br>
+            <button class="btn bg-primary btn-outline btn-md" type="submit" name="predict">Predict</button>
+           </div>
+          </div>
+         </form>
+        </div>
+       <br>
+       <h3 style=text-align:center>{{ News_prediction }}</h3>
+     </div> 
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
